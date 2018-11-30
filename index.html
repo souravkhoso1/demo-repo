@@ -13,7 +13,7 @@ $.ajax({
     success: function (data) { 
         $.each(data, function(index, element) {
             $('body').append($('<div>', {
-                text: element.name
+                text: element.MovieName
             }));
         });
     }
