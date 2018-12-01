@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Hello All</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$.ajax({ 
+    type: 'GET', 
+    url: 'https://souravkhoso1.github.io/demo-repo/data.json',  
+    dataType: 'json',
+    success: function (data) { 
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', {
+                text: element.MovieName
+            }));
+        });
+    }
+});
+</script>
+</body>
+</html>
